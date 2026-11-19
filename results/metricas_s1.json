@@ -1,0 +1,660 @@
+{
+ "fecha": "2026-11-18",
+ "simbolo": "XAUUSD",
+ "datos": {
+  "timeframe": "M15",
+  "barras": 99916,
+  "desde": "2022-08-26",
+  "hasta": "2026-11-18",
+  "spread_usd": 0.69,
+  "comision_usd_oz": 0.07,
+  "swap_largo_usd_oz_noche": -1.7434872355,
+  "swap_corto_usd_oz_noche": 0.8733026744,
+  "swap_triple": "miercoles"
+ },
+ "base_repo": {
+  "n": 247,
+  "pf": 1.09,
+  "total_R": 8.7,
+  "dd_R": 20.5,
+  "t": 0.63,
+  "anual": {
+   "2022": -1.4,
+   "2023": -16.8,
+   "2024": 6.6,
+   "2025": 13.8,
+   "2026": 6.5
+  }
+ },
+ "mejor_variante": {
+  "regla": "rango 16 velas <=2.8 ATR, cuerpo >=1.10x, buffer 0.04 ATR, H1+H4 alineados, k_sl=4.4 ATR, TP=12.76 ATR, hold=96 velas, ventana 13-16 servidor",
+  "n": 93,
+  "wr_pct": 51.6,
+  "pf_sin_swap": 2.035,
+  "pf_con_swap": 1.89,
+  "total_R_sin_swap": 43.2,
+  "total_R_con_swap": 37.9,
+  "dd_R_con_swap": 6.5,
+  "t_con_swap": 2.6,
+  "coste_pct_R": 4.4,
+  "anual_con_swap": {
+   "2022": -0.9,
+   "2023": 4.1,
+   "2024": 0.9,
+   "2025": 20.5,
+   "2026": 13.3
+  },
+  "largo": {
+   "n": 68,
+   "pf": 2.297,
+   "R": 36.3
+  },
+  "corto": {
+   "n": 25,
+   "pf": 1.104,
+   "R": 1.5
+  },
+  "salidas": {
+   "time": 39,
+   "sl": 37,
+   "tp": 17
+  }
+ },
+ "meseta": {
+  "k_sl": [
+   3.2,
+   5.0
+  ],
+  "hold_velas": [
+   96,
+   168
+  ],
+  "pf_rango_sin_swap": [
+   1.75,
+   2.02
+  ],
+  "n_rango": [
+   93,
+   96
+  ]
+ },
+ "validacion_ticks": {
+  "terminal": "Dukascopy-demo-mt5-1 build 6320",
+  "modelo": "Model=4 (cada tick basado en ticks reales)",
+  "periodo": "2024-01-01 a 2026-11-18",
+  "ticks_procesados": 207909791,
+  "calidad_historial": "99% ticks reales",
+  "deposito": 50000,
+  "riesgo_pct": 1.5,
+  "principal": {
+   "n": 69,
+   "pf_informe": 2.17,
+   "beneficio_neto_usd": 31282.72,
+   "retorno_pct": 62.6,
+   "dd_balance_pct": 6.93,
+   "dd_equity_pct": 8.92,
+   "sharpe": 6.66,
+   "pf_csv_neto_comision7": 2.15,
+   "total_R": 33.58,
+   "dd_R": 4.89,
+   "t": 2.68,
+   "wr_pct": 53.6,
+   "esperanza_R": 0.4867,
+   "anual_R": {
+    "2024": 3.91,
+    "2025": 18.83,
+    "2026": 10.84
+   },
+   "largo": {
+    "n": 53,
+    "wr_pct": 56.6,
+    "pf": 2.47,
+    "R": 30.09
+   },
+   "corto": {
+    "n": 16,
+    "wr_pct": 43.8,
+    "pf": 1.4,
+    "R": 3.5
+   },
+   "horas_en_mercado_media": 24.5,
+   "exposicion_pct_del_periodo": 6.9,
+   "max_dd_R": {
+    "valor": 4.89,
+    "desde": "2026-05-20",
+    "hasta": "2026-10-15",
+    "dias": 147
+   },
+   "racha_perdedora_max": 5,
+   "racha_ganadora_max": 6,
+   "peores_meses_R": {
+    "2024-12": -2.92,
+    "2026-07": -2.02,
+    "2024-09": -1.77,
+    "2026-08": -1.57
+   },
+   "meses_positivos": "20 de 26"
+  },
+  "robustez": {
+   "k35": {
+    "parametros": "KSL=3.5 KTP=10.15 hold=96",
+    "n": 71,
+    "pf": 2.21,
+    "pf_csv": 2.15,
+    "R": 38.4,
+    "dd_balance_pct": 6.7,
+    "dd_R": 4.71,
+    "t": 2.79,
+    "net_usd": 36914.23,
+    "anual_R": {
+     "2024": -0.48,
+     "2025": 28.58,
+     "2026": 10.32
+    }
+   },
+   "k53": {
+    "parametros": "KSL=5.3 KTP=15.37 hold=96",
+    "n": 69,
+    "pf": 2.11,
+    "pf_csv": 2.11,
+    "R": 28.9,
+    "dd_balance_pct": 6.36,
+    "dd_R": 4.44,
+    "t": 2.46,
+    "net_usd": 25492.02,
+    "anual_R": {
+     "2024": 1.53,
+     "2025": 14.12,
+     "2026": 13.25
+    }
+   },
+   "h120": {
+    "parametros": "KSL=4.4 KTP=12.76 hold=120",
+    "n": 69,
+    "pf": 2.29,
+    "pf_csv": 2.25,
+    "R": 38.3,
+    "dd_balance_pct": 6.52,
+    "dd_R": 5.43,
+    "t": 2.91,
+    "net_usd": 36738.17,
+    "anual_R": {
+     "2024": 3.83,
+     "2025": 22.4,
+     "2026": 12.09
+    }
+   }
+  },
+  "coste_real": {
+   "comision_testigo_usd_lote": 0.0,
+   "comision_asumida_usd_lote": 7.0,
+   "efecto_comision_sobre_R_pct": 0.2,
+   "coste_spread_pct_R_observado": 2.0,
+   "filtro_InpMaxCostPctR": 8.0,
+   "activaciones_filtro": "practicamente nulas"
+  },
+  "veredicto": "PASA G4 en ticks. PF 2.11-2.29 en las 4 configuraciones, DD balance 6.4-6.9%, DD equity 8.9%, t 2.46-2.91. Pero el 88% del R viene de 2025-2026 y no existe OOS pre-2024 en ticks.",
+  "split_oos_interno": {
+   "metodo": "ejecutar el EA compilado por separado: 2024 solo (out-of-sample) y 2025-2026 (in-sample)",
+   "oos_2024": {
+    "n": 26,
+    "wr_pct": 42.3,
+    "pf_informe": 1.3,
+    "pf_csv": 1.31,
+    "R": 3.91,
+    "dd_balance_pct": 4.25,
+    "dd_equity_pct": 5.84,
+    "dd_R": 2.92,
+    "t": 0.55,
+    "p_valor_aprox": 0.29,
+    "net_usd": 2883.36,
+    "veredicto": "NO confirma. PF 1.30 no distinguible de ruido con 26 trades."
+   },
+   "is_2025_2026": {
+    "n": 43,
+    "wr_pct": 60.5,
+    "pf_informe": 2.63,
+    "pf_csv": 2.8,
+    "R": 29.67,
+    "dd_balance_pct": 7.02,
+    "dd_equity_pct": 8.99,
+    "dd_R": 4.89,
+    "t": 2.9,
+    "p_valor_aprox": 0.002,
+    "net_usd": 26556.54
+   },
+   "variantes_sobre_2024": {
+    "k35": {
+     "n": 26,
+     "pf": 0.97,
+     "R": -0.48
+    },
+    "k53": {
+     "n": 26,
+     "pf": 1.13,
+     "R": 1.53
+    },
+    "h120": {
+     "n": 26,
+     "pf": 1.27,
+     "R": 3.83
+    },
+    "h1000": {
+     "n": 26,
+     "pf": 1.2,
+     "R": 4.07,
+     "dd_balance_pct": 9.25
+    }
+   },
+   "conclusion": "G5 FALLA: el edge no se demuestra fuera de la muestra. El sistema es un seguidor de tendencia que solo gana cuando el oro acelera (2025-2026). 2024, tambien alcista, dejo +5.8%."
+  },
+  "hipotesis_volatilidad": {
+   "regla": "no entrar si ATR(14)/precio*100 > umbral",
+   "input": "InpMaxATRPct (0 = desactivado, valor por defecto)",
+   "evidencia": "correlacion ATR% vs R = -0.11; quintil mas volatil aporta +0.03R de 33.6R totales",
+   "consistencia_por_ano": {
+    "2024": "ATR bajo +6.04R vs alto -2.13R",
+    "2025": "+15.18R vs +3.65R",
+    "2026": "+10.47R vs +0.37R"
+   },
+   "efecto_ticks": {
+    "2024": {
+     "pf_off": 1.3,
+     "pf_018": 1.46,
+     "R_off": 3.91,
+     "R_018": 5.06
+    },
+    "2025_2026": {
+     "pf_off": 2.8,
+     "pf_018": 6.31,
+     "R_off": 29.67,
+     "R_018": 27.73,
+     "n_off": 43,
+     "n_018": 23,
+     "dd_R_off": 4.89,
+     "dd_R_018": 1.1
+    }
+   },
+   "efecto_m15_2022_2023": {
+    "pf_off": 1.31,
+    "pf_020": 1.25,
+    "pf_018": 1.16,
+    "n_off": 25,
+    "n_018": 23
+   },
+   "veredicto": "Hipotesis exploratoria, NO validada. Mejora mucho 2024-2026 y es neutra/negativa en 2022-2023. Se deja desactivada por defecto y se registra en la demo."
+  }
+ },
+ "limitaciones": [
+  "sin OOS real antes de 2024-01 en ticks (Dukascopy solo tiene ticks XAUUSD desde 2024)",
+  "88% del R en 2025-2026; 2024 aporta solo +3.9R",
+  "max DD en R duro 147 dias (may-oct 2026)",
+  "slippage no modelado mas alla de los 30 puntos de desviacion",
+  "swap Pepperstone no confirmado",
+  "solo 16 cortos: el lado corto no esta probado"
+ ],
+ "escalera_riesgo": {
+  "inicial_pct": 1.0,
+  "objetivo_pct": 1.5,
+  "techo_pct": 1.8,
+  "dd_esperado_pct": 10,
+  "retorno_esperado_anual_pct": [
+   8,
+   14
+  ]
+ },
+ "broker": {
+  "datos_historicos": "Dukascopy (ticks reales XAUUSD desde 2024-01)",
+  "candidato_live": [
+   "Pepperstone Razor",
+   "IC Markets Raw"
+  ],
+  "motivo": "swap del largo en oro: Dukascopy -1.743 USD/oz/noche castiga holds de 24h",
+  "pendiente": "comparar swap y comision reales antes de elegir cuenta live"
+ },
+ "ga_b": {
+  "origen": "GA doble split, split B (train 2022-2024 M15 -> test 2025-2026)",
+  "parametros": {
+   "RangeBars": 20,
+   "MaxRangeATR": 3.4,
+   "ImpulseMult": 1.05,
+   "BufferATR": 0.0,
+   "ATRPeriod": 14,
+   "MaxATRPct": 0.16,
+   "StrictTrend": true,
+   "HorasServidor": "13-17",
+   "KSL": 5.2,
+   "KTP": 18.2,
+   "RangeTargetMult": 1.25,
+   "HoldBars": 120
+  },
+  "ticks_2024_2026": {
+   "n": 46,
+   "pf": 3.05,
+   "net_usd": 33689.46,
+   "dd_balance_pct": 4.26,
+   "dd_equity_pct": 6.98,
+   "sharpe": 9.04,
+   "recovery_factor": 9.43,
+   "riesgo_pct": 1.5,
+   "deposito": 50000
+  },
+  "oos_real_2025_2026": {
+   "n": 28,
+   "pf": 4.28,
+   "net_usd": 26921.16,
+   "dd_balance_pct": 4.26,
+   "dd_equity_pct": 5.23,
+   "sharpe": 11.38,
+   "nota": "corrida aislada con inputs 100% explicitos"
+  },
+  "is_puro_2024": {
+   "n": 18,
+   "pf": 1.6,
+   "R": 5.94
+  }
+ },
+ "robustez_ticks_gaB": {
+  "criterio": "PF >= 2.5 y DD <= 7% en todas las variantes",
+  "base": {
+   "n": 46,
+   "pf": 2.86,
+   "R": 35.94,
+   "ddR": 3.17,
+   "t": 3.07
+  },
+  "variantes": {
+   "rb18": {
+    "n": 51,
+    "R": 40.44,
+    "pf": 2.872,
+    "wr": 58.8,
+    "expR": 0.793,
+    "ddR": 3.17,
+    "t": 3.14,
+    "stderr": 0.253,
+    "avgW": 2.07,
+    "avgL": -1.03
+   },
+   "rb22": {
+    "n": 40,
+    "R": 41.85,
+    "pf": 4.141,
+    "wr": 67.5,
+    "expR": 1.046,
+    "ddR": 3.17,
+    "t": 3.91,
+    "stderr": 0.268,
+    "avgW": 2.04,
+    "avgL": -1.03
+   },
+   "cap18": {
+    "n": 63,
+    "R": 31.15,
+    "pf": 2.066,
+    "wr": 50.8,
+    "expR": 0.494,
+    "ddR": 3.17,
+    "t": 2.42,
+    "stderr": 0.205,
+    "avgW": 1.89,
+    "avgL": -0.94
+   },
+   "cap14": {
+    "n": 30,
+    "R": 26.57,
+    "pf": 3.151,
+    "wr": 60.0,
+    "expR": 0.886,
+    "ddR": 3.17,
+    "t": 2.75,
+    "stderr": 0.322,
+    "avgW": 2.16,
+    "avgL": -1.03
+   },
+   "ksl48": {
+    "n": 46,
+    "R": 38.46,
+    "pf": 2.866,
+    "wr": 56.5,
+    "expR": 0.836,
+    "ddR": 3.2,
+    "t": 3.12,
+    "stderr": 0.268,
+    "avgW": 2.27,
+    "avgL": -1.03
+   },
+   "ksl56": {
+    "n": 46,
+    "R": 31.19,
+    "pf": 2.63,
+    "wr": 56.5,
+    "expR": 0.678,
+    "ddR": 3.2,
+    "t": 2.77,
+    "stderr": 0.245,
+    "avgW": 1.94,
+    "avgL": -0.96
+   },
+   "h168": {
+    "n": 46,
+    "R": 35.88,
+    "pf": 2.81,
+    "wr": 56.5,
+    "expR": 0.78,
+    "ddR": 4.09,
+    "t": 2.9,
+    "stderr": 0.269,
+    "avgW": 2.14,
+    "avgL": -0.99
+   },
+   "he18": {
+    "n": 47,
+    "R": 34.85,
+    "pf": 2.705,
+    "wr": 57.4,
+    "expR": 0.741,
+    "ddR": 3.17,
+    "t": 2.94,
+    "stderr": 0.252,
+    "avgW": 2.05,
+    "avgL": -1.02
+   }
+  },
+  "veredicto": "meseta: 8/8 rentables, 7/8 con PF>=2.5, DD 3.17-4.09R"
+ },
+ "pruebas_transversales": {
+  "retraso_senal": {
+   "n": 77,
+   "R": 46.14,
+   "pf": 2.332,
+   "dd": 3.45,
+   "t": 3.17,
+   "wr": 55.8
+  },
+  "nota": "M15 2022-08..2026-11, costes y swap reales; ver SISTEMA_OPERATIVO.md",
+  "retraso_0_velas": {
+   "n": 77,
+   "R": 46.14,
+   "pf": 2.332,
+   "dd": 3.45,
+   "t": 3.17,
+   "wr": 55.8
+  },
+  "retraso_1_velas": {
+   "n": 77,
+   "R": 40.19,
+   "pf": 2.185,
+   "dd": 3.66,
+   "t": 2.92,
+   "wr": 57.1
+  },
+  "retraso_2_velas": {
+   "n": 77,
+   "R": 33.59,
+   "pf": 1.971,
+   "dd": 4.0,
+   "t": 2.5,
+   "wr": 54.5
+  },
+  "retraso_3_velas": {
+   "n": 77,
+   "R": 32.27,
+   "pf": 1.931,
+   "dd": 4.49,
+   "t": 2.41,
+   "wr": 51.9
+  },
+  "arranques": {
+   "0": {
+    "n": 77,
+    "R": 46.14,
+    "pf": 2.332,
+    "dd": 3.45,
+    "t": 3.17,
+    "wr": 55.8
+   },
+   "3": {
+    "n": 74,
+    "R": 39.95,
+    "pf": 2.153,
+    "dd": 3.45,
+    "t": 2.81,
+    "wr": 54.1
+   },
+   "6": {
+    "n": 68,
+    "R": 41.63,
+    "pf": 2.311,
+    "dd": 3.45,
+    "t": 2.99,
+    "wr": 55.9
+   },
+   "9": {
+    "n": 63,
+    "R": 37.66,
+    "pf": 2.299,
+    "dd": 3.45,
+    "t": 2.88,
+    "wr": 57.1
+   },
+   "12": {
+    "n": 59,
+    "R": 34.94,
+    "pf": 2.248,
+    "dd": 3.45,
+    "t": 2.7,
+    "wr": 55.9
+   },
+   "15": {
+    "n": 48,
+    "R": 32.43,
+    "pf": 2.518,
+    "dd": 3.29,
+    "t": 2.76,
+    "wr": 58.3
+   },
+   "18": {
+    "n": 43,
+    "R": 32.95,
+    "pf": 2.822,
+    "dd": 3.12,
+    "t": 2.93,
+    "wr": 60.5
+   }
+  },
+  "anios": {
+   "2022": {
+    "n": 5,
+    "R": 3.83,
+    "pf": 2.622,
+    "dd": 2.36,
+    "t": 0.87,
+    "wr": 60.0
+   },
+   "2023": {
+    "n": 26,
+    "R": 12.65,
+    "pf": 2.16,
+    "dd": 3.45,
+    "t": 1.61,
+    "wr": 53.8
+   },
+   "2024": {
+    "n": 19,
+    "R": 4.0,
+    "pf": 1.349,
+    "dd": 2.2,
+    "t": 0.56,
+    "wr": 42.1
+   },
+   "2025": {
+    "n": 22,
+    "R": 13.79,
+    "pf": 2.392,
+    "dd": 3.12,
+    "t": 1.76,
+    "wr": 59.1
+   },
+   "2026": {
+    "n": 5,
+    "R": 11.87,
+    "pf": 99.0,
+    "dd": 0.0,
+    "t": 3.77,
+    "wr": 100.0
+   }
+  }
+ },
+ "paridad": {
+  "reglas_nautilus": "5/5 en TradeX_S1_XAU v1.11",
+  "control_negativo": "0/5 (fichero con look-ahead, pendiente, lote fijo y rama tester)",
+  "herramienta": "herramientas/paridad_ea.py"
+ },
+ "protecciones": {
+  "version": "1.11",
+  "default": "off",
+  "compilacion": "0 errores, 0 warnings",
+  "regresion_off": "identica a v1.10 (46 trades, PF 3.05, 33 689.46 USD)",
+  "disparo_mt5": "MaxDD 6% disparo el 2024-02-15 con DD equity 6.04% y bloqueo 48h",
+  "trades_descartados": 0,
+  "conclusion": "inertes en esta estrategia (1 trade/semana); son seguro de cola, no optimizador"
+ },
+ "escalera_riesgo_gaB": {
+  "0.5%": {
+   "p50": 2.0,
+   "p95": 3.8,
+   "p_dd15": 0.0
+  },
+  "1.0%": {
+   "p50": 4.1,
+   "p95": 7.7,
+   "p_dd15": 0.03
+  },
+  "1.25%": {
+   "p50": 5.1,
+   "p95": 9.6,
+   "p_dd15": 0.23
+  },
+  "1.5%": {
+   "p50": 6.2,
+   "p95": 11.5,
+   "p_dd15": 0.94
+  },
+  "2.0%": {
+   "p50": 8.2,
+   "p95": 15.3,
+   "p_dd15": 5.51
+  },
+  "2.5%": {
+   "p50": 10.2,
+   "p95": 19.2,
+   "p_dd15": 15.59
+  }
+ },
+ "veredicto_gaB": {
+  "puertas": "7/7",
+  "texto": "CAPITAL REAL (con escalera de riesgo)",
+  "cautela": "2025-2026 no fue usado para ajustar la fitness, pero si para desempatar GA-A vs GA-B; el holdout es semilimpio"
+ }
+}
