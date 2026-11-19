@@ -1,0 +1,144 @@
+{
+ "label": "S1 GA-B",
+ "risk": 1.5,
+ "base": {
+  "n": 46,
+  "R": 35.94,
+  "pf": 2.858,
+  "wr": 58.7,
+  "expR": 0.781,
+  "ddR": 3.17,
+  "t": 3.07,
+  "stderr": 0.254,
+  "avgW": 2.05,
+  "avgL": -1.02
+ },
+ "is_only": null,
+ "oos": {
+  "n": 18,
+  "R": 5.94,
+  "pf": 1.598,
+  "wr": 44.4,
+  "expR": 0.33,
+  "ddR": 3.17,
+  "t": 0.85,
+  "stderr": 0.389,
+  "avgW": 1.98,
+  "avgL": -0.99
+ },
+ "variants": {},
+ "gates": [
+  {
+   "gate": "G1 datos",
+   "pass": true,
+   "detail": "3 anos con datos, 46 trades"
+  },
+  {
+   "gate": "G2 costes",
+   "pass": true,
+   "detail": "R_net7/R_simbolo=0.995, coste medio=0.004R/trade"
+  },
+  {
+   "gate": "G3 robustez",
+   "pass": false,
+   "detail": "sin variantes: no evaluable"
+  },
+  {
+   "gate": "G4 in-sample",
+   "pass": true,
+   "detail": "n=46 PF=2.86 t=3.07 DD=4.8% (a 1.5%)"
+  },
+  {
+   "gate": "G5 out-of-sample",
+   "pass": false,
+   "detail": "n=18 PF=1.60 R=+5.94 t=0.85"
+  },
+  {
+   "gate": "G6 bootstrap",
+   "pass": true,
+   "detail": "P95 DD=11.5% a 1.5% riesgo (P(DD>15%)=0.94%)"
+  },
+  {
+   "gate": "G7 estabilidad",
+   "pass": true,
+   "detail": "3/3 anos positivos, peor ano=+5.94R"
+  }
+ ],
+ "bootstrap": {
+  "risk": 1.5,
+  "p50": 6.15,
+  "p95": 11.5,
+  "p99": 14.86,
+  "max": 27.45,
+  "p_dd_over_15": 0.94
+ },
+ "by_year": {
+  "2024": {
+   "n": 18,
+   "R": 5.94,
+   "pf": 1.598,
+   "wr": 44.4,
+   "expR": 0.33,
+   "ddR": 3.17,
+   "t": 0.85,
+   "stderr": 0.389,
+   "avgW": 1.98,
+   "avgL": -0.99
+  },
+  "2025": {
+   "n": 22,
+   "R": 18.71,
+   "pf": 3.226,
+   "wr": 63.6,
+   "expR": 0.85,
+   "ddR": 2.92,
+   "t": 2.36,
+   "stderr": 0.36,
+   "avgW": 1.94,
+   "avgL": -1.05
+  },
+  "2026": {
+   "n": 6,
+   "R": 11.29,
+   "pf": 12.254,
+   "wr": 83.3,
+   "expR": 1.882,
+   "ddR": 1.0,
+   "t": 2.52,
+   "stderr": 0.747,
+   "avgW": 2.46,
+   "avgL": -1.0
+  }
+ },
+ "by_side": {
+  "BUY": {
+   "n": 39,
+   "R": 36.05,
+   "pf": 3.485,
+   "wr": 64.1,
+   "expR": 0.924,
+   "ddR": 2.22,
+   "t": 3.39,
+   "stderr": 0.272,
+   "avgW": 2.02,
+   "avgL": -1.04
+  },
+  "SELL": {
+   "n": 7,
+   "R": -0.11,
+   "pf": 0.977,
+   "wr": 28.6,
+   "expR": -0.016,
+   "ddR": 3.84,
+   "t": -0.02,
+   "stderr": 0.664,
+   "avgW": 2.36,
+   "avgL": -0.97
+  }
+ },
+ "warnings": [
+  "AVISO: 100% de los trades OOS ya estan en el in-sample. Ese tramo NO es un holdout independiente: el optimizador pudo verlo. Declara el corte con --train-end para que el juicio sea correcto.",
+  "AVISO: los anos OOS [2024] estan dentro del rango del in-sample [2024, 2025, 2026]. Comprobar en que tramo se entreno el optimizador."
+ ],
+ "verdict": "SOLO DEMO: el edge aparece in-sample pero el OOS no confirma"
+}
