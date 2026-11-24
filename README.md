@@ -110,6 +110,7 @@ $py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
 | `docs/ACTIVIDAD_S1.md` | Cómo aumentar la frecuencia de trades: sweep de palancas y variante `S1_gaB_active`. |
 | `docs/OPTIMIZACION_ACTIVIDAD.md` | Optimización con DD<15%: preset `S1_opt_active`, +91% trades y +39% R. |
 | `docs/DD20_ALTA_FRECUENCIA.md` | Alta frecuencia con DD<20%: preset `S1_dd20_freq`, 192 trades y guarda de equity. |
+| `docs/MULTIPOSICION_S1.md` | EA `TradeX_S1_XAU_Multi`: hasta 6 posiciones, 465 trades y DD<20%. |
 | `results/metricas_s1.json` | JSON con todas las métricas por variante, año, costo, robustez, etc. |
 
 ---
