@@ -444,7 +444,7 @@ fill reales), que es lo único que ninguna de estas pruebas puede medir.
 
 - `herramientas/veredicto.py` — puertas G1-G7 ejecutables, con detección de OOS
   contaminado.
-- `herramientas/paridad_ea.py` — auditor estático de paridad research/live.
+- `tools/paridad_ea.py` — auditor estático de paridad research/live.
 - `resultados/SISTEMA_OPERATIVO.md` — el procedimiento completo, con los números.
 - `resultados/PROTECCIONES_S1.md` — medición de las protecciones.
 - `resultados/EXTRACCION_FRAMEWORKS.md` — qué se adoptó de los 5 repos.

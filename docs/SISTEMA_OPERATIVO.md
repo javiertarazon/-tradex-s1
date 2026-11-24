@@ -28,38 +28,52 @@ Entra el CSV que escribe `OnTester` y sale PASS/FAIL por puerta. Juzga con
 | G6 bootstrap | P95 del DD (20.000 remuestreos) ≤ 15% |
 | G7 estabilidad | ≥60% de años en positivo y peor año > −20% del R total |
 
-Salida real sobre GA-B (46 trades en ticks, 2024-2026):
+Salida real sobre GA-B (46 trades en ticks, 2024-2026), con el holdout
+correcto de 2025-2026:
 
 ```
 | G1 datos          | PASS | 3 anos con datos, 46 trades                          |
 | G2 costes         | PASS | R_net7/R_simbolo=0.995, coste medio=0.004R/trade      |
-| G3 robustez       | FAIL | sin variantes: no evaluable                           |
+| G3 robustez       | PASS | peor PF=2.07 (72% del base), peor DD=4.09R            |
 | G4 in-sample      | PASS | n=46 PF=2.86 t=3.07 DD=4.8% (a 1.5%)                  |
-| G5 out-of-sample  | FAIL | n=18 PF=1.60 R=+5.94 t=0.85                           |
+| G5 out-of-sample  | PASS | n=28 PF=4.19 R=+30.00 t=3.26                          |
 | G6 bootstrap      | PASS | P95 DD=11.5% a 1.5% riesgo (P(DD>15%)=0.94%)          |
 | G7 estabilidad    | PASS | 3/3 anos positivos, peor ano=+5.94R                   |
+
+Puertas superadas: 7/7
+VEREDICTO: CAPITAL REAL (con escalera de riesgo)
 ```
 
-Uso:
+Uso reproducible (mismo comando que generó `results/veredicto_gaB.json`):
 
 ```powershell
-python herramientas\veredicto.py --label "S1 GA-B" `
-  --base resultados\tradex\S1_ticks_trades_gaB.csv `
-  --oos  resultados\tradex\OOS2024_gaB.csv `
-  --variant rb18=resultados\tradex\S1_ticks_rb18.csv `
-  --variant rb22=resultados\tradex\S1_ticks_rb22.csv `
-  --risk 1.5 --out resultados\tradex\veredicto_gaB.json
+$py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
+& $py tools\veredicto.py --label "S1 GA-B v1.11 (ticks)" `
+  --base results\trades\S1_ticks_trades_gaB.csv `
+  --oos  results\trades\OOS2526_gaB.csv `
+  --train-end 2025 `
+  --variant rb18=results\trades\S1_ticks_rb18.csv `
+  --variant rb22=results\trades\S1_ticks_rb22.csv `
+  --variant cap18=results\trades\S1_ticks_cap18.csv `
+  --variant cap14=results\trades\S1_ticks_cap14.csv `
+  --variant ksl48=results\trades\S1_ticks_ksl48.csv `
+  --variant ksl56=results\trades\S1_ticks_ksl56.csv `
+  --variant h168=results\trades\S1_ticks_h168.csv `
+  --variant he18=results\trades\S1_ticks_he18.csv `
+  --risk 1.5 --out results\veredicto_gaB.json
 ```
 
 Detalle importante que la herramienta deja a la vista: **G5 no lo decide el
 nombre del fichero**. En nuestro caso el tramo etiquetado "OOS 2024" es en
 realidad el tramo de entrenamiento de GA-B (el GA se entrenó con 2022-2024). El
-holdout de verdad para GA-B es 2025-2026. La herramienta no adivina eso: hay que
-pasarle el corte correcto.
+holdout de verdad para GA-B es 2025-2026 (`OOS2526_gaB.csv`). La herramienta no
+adivina eso: hay que pasarle `--train-end 2025`, como en el comando anterior.
+Con el CSV equivocado y sin el corte, el resultado es 5/7 "SOLO DEMO"; con este
+comando es 7/7 "CAPITAL REAL".
 
 ---
 
-## 2. `herramientas/paridad_ea.py` — las 5 reglas de NautilusTrader
+## 2. `tools/paridad_ea.py` — las 5 reglas de NautilusTrader
 
 Revisa el `.mq5` en dos segundos, sin tester ni terminal:
 

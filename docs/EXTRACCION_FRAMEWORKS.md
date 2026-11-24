@@ -146,7 +146,7 @@ del repo de origen.
 | 1 | Protecciones MQL5 (SLGuard, MaxDD equity, Cooldown) | Freqtrade | **Implementado y compilado (v1.11, 0 errores). Verificado en ticks: ver `PROTECCIONES_S1.md`** | Con `InpUseProtections=false` el resultado debe ser idéntico al validado (regresión) |
 | 2 | Test de desplazamiento de señal | Freqtrade recursive-analysis | **Hecho** | PF con 3 velas de retraso = 83% del base (criterio ≥70%): pasa |
 | 3 | Objetivo Calmar + mínimo de trades en el GA | Freqtrade hyperopt | **Ya aplicado** | Ninguna configuración con < 12 trades puntúa |
-| 4 | Checklist de paridad | NautilusTrader | **Automatizado en `herramientas/paridad_ea.py`**: S1 5/5, control negativo 0/5 | 5/5 reglas verificadas en el código |
+| 4 | Checklist de paridad | NautilusTrader | **Automatizado en `tools/paridad_ea.py`**: S1 5/5, control negativo 0/5 | 5/5 reglas verificadas en el código |
 | 5 | Pipeline de 10 candidatos del índice | awesome-list | Opcional | Cada uno pasa G1 (datos) y G2 (costes) antes de codificar |
 
 ---

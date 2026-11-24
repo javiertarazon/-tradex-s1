@@ -63,26 +63,37 @@ tradex-s1/
 
 ```powershell
 # 1. Clonar o copiar el repo a la carpeta deseada
-git clone https://github.com/tu-usuario/tradex-s1.git    # o copiar la carpeta
+git clone https://github.com/javiertarazon/-tradex-s1.git tradex-s1
+cd tradex-s1
 
 # 2. Verificar que el CSV de datos existe
-ls tradex-s1/research/data/xau_m15_2022_2026.csv
+Get-Item research\data\xau_m15_2022_2026.csv
 
 # 3. (Opcional) Refrescar la cache desde MT5
-C:\Users\javie\AppData\Local\Temp\opencode\mt5venv\Scripts\python.exe tradex-s1\research\mt5_fetch.py
+$py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
+& $py research\mt5_fetch.py
 
 # 4. Ejecutar validación rápida (sin MT5, solo lógica interna)
-C:\Users\javie\AppData\Local\Temp\opencode\mt5venv\Scripts\python.exe tradex-s1\research\s1_paridad.py
+& $py research\s1_paridad.py
 # Debe imprimir 1 lag=0 PF=2.32 ... 3 años naturales coherentes
 
-# 5. Ejecutar veredicto G1-G7
-python herramientas\veredicto.py --label "S1 GA-B" `
-  --base resultados\tradex\S1_ticks_trades_gaB.csv `
-  --oos  resultados\tradex\OOS2024_gaB.csv `
-  --risk 1.5 --out resultados\tradex\veredicto_gaB.json
+# 5. Ejecutar veredicto G1-G7 (7/7, decisión CAPITAL REAL)
+& $py tools\veredicto.py --label "S1 GA-B v1.11 (ticks)" `
+  --base results\trades\S1_ticks_trades_gaB.csv `
+  --oos  results\trades\OOS2526_gaB.csv `
+  --train-end 2025 `
+  --variant rb18=results\trades\S1_ticks_rb18.csv `
+  --variant rb22=results\trades\S1_ticks_rb22.csv `
+  --variant cap18=results\trades\S1_ticks_cap18.csv `
+  --variant cap14=results\trades\S1_ticks_cap14.csv `
+  --variant ksl48=results\trades\S1_ticks_ksl48.csv `
+  --variant ksl56=results\trades\S1_ticks_ksl56.csv `
+  --variant h168=results\trades\S1_ticks_h168.csv `
+  --variant he18=results\trades\S1_ticks_he18.csv `
+  --risk 1.5 --out results\veredicto_gaB.json
 
 # 6. Ejecutar paridad EA (5/5 reglas)
-C:\Users\javie\AppData\Local\Temp\opencode\mt5venv\Scripts\python.exe tradex-s1\research\paridad_ea.py
+& $py tools\paridad_ea.py src\TradeX_S1_XAU.mq5
 ```
 
 ---
