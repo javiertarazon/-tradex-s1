@@ -111,6 +111,7 @@ $py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
 | `docs/OPTIMIZACION_ACTIVIDAD.md` | Optimización con DD<15%: preset `S1_opt_active`, +91% trades y +39% R. |
 | `docs/DD20_ALTA_FRECUENCIA.md` | Alta frecuencia con DD<20%: preset `S1_dd20_freq`, 192 trades y guarda de equity. |
 | `docs/MULTIPOSICION_S1.md` | EA `TradeX_S1_XAU_Multi`: hasta 6 posiciones, 465 trades y DD<20%. |
+| `docs/MULTI8_MAX_PNL.md` | **Recomendado**: preset `S1_multi8_h72_r125`, 477 trades, +343,8%, DD<20%. Incluye estudio de lotaje dinámico (descartado). |
 | `results/metricas_s1.json` | JSON con todas las métricas por variante, año, costo, robustez, etc. |
 
 ---
