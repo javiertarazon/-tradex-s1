@@ -1,0 +1,34 @@
+{
+ "D:\\proyectos_javier\\proyectos\\tradex-s1\\src\\TradeX_S1_XAU.mq5": [
+  {
+   "rule": "R1 sin look-ahead",
+   "pass": true,
+   "evidence": "todas las lecturas de precio usan shift >= 1",
+   "lines": []
+  },
+  {
+   "rule": "R2 niveles en la orden",
+   "pass": true,
+   "evidence": "1 envios, 0 sin sl/tp",
+   "lines": []
+  },
+  {
+   "rule": "R3 sizing real",
+   "pass": true,
+   "evidence": "balance/equity=si, tick_value=si, lotes hardcodeados=0",
+   "lines": []
+  },
+  {
+   "rule": "R4 sin ordenes pendientes",
+   "pass": true,
+   "evidence": "0 pendientes, 0 modificaciones",
+   "lines": []
+  },
+  {
+   "rule": "R5 sin bifurcacion tester",
+   "pass": true,
+   "evidence": "0 ramas condicionadas al entorno",
+   "lines": []
+  }
+ ]
+}

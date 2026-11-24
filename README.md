@@ -109,6 +109,7 @@ $py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
 | `docs/DIAGNOSTICO_VENTAS.md` | Por qué el EA genera pocas ventas: embudo de filtros y contraste strict ON/OFF. |
 | `docs/ACTIVIDAD_S1.md` | Cómo aumentar la frecuencia de trades: sweep de palancas y variante `S1_gaB_active`. |
 | `docs/OPTIMIZACION_ACTIVIDAD.md` | Optimización con DD<15%: preset `S1_opt_active`, +91% trades y +39% R. |
+| `docs/DD20_ALTA_FRECUENCIA.md` | Alta frecuencia con DD<20%: preset `S1_dd20_freq`, 192 trades y guarda de equity. |
 | `results/metricas_s1.json` | JSON con todas las métricas por variante, año, costo, robustez, etc. |
 
 ---
