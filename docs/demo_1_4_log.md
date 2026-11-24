@@ -41,20 +41,30 @@
 ## Artefactos preparados
 - EA compilado: `src\TradeX_S1_XAU.ex5` → copiado a
   `MQL5\Experts\TradeX_S1_XAU.ex5`
-- Set del tester: `presets\S1_gaB.set` → copiado a
-  `MQL5\Profiles\Tester\TradeX_S1_XAU.set` con `InpRiskPercent=1.0`
-- Config del tester: `configs\demo_1_0_XAUUSD_M15.ini`
+- Set del tester: `presets\S1_gaB_demo1.set` (GA-B con `InpRiskPercent=1.0`)
+  → copiado a `MQL5\Profiles\Tester\S1_gaB_demo1.set`
+- Config del tester: `configs\demo_1_0_XAUUSD_M15.ini`, con
+  `ExpertParameters=S1_gaB_demo1.set` declarado explícitamente. Así no depende
+  del `TradeX_S1_XAU.set` autoguardado por la interfaz (que podría cambiar).
 - Auditorías: `veredicto.py` **7/7 CAPITAL REAL**, `paridad_ea.py` **5/5**
+- **El EA NO está attachado al gráfico en vivo**: el perfil de chart
+  `MQL5\Profiles\Charts\Default\chart01.chr` no contiene sección `<expert>`.
+  Para operar en demo hace falta arrancar el terminal con un `[StartUp]` que
+  cargue el mismo preset desde `MQL5\Presets`.
 
-## Resultado de la prueba de tester (2026-11-23 — NO es operación en vivo)
+## Resultado de la prueba de tester (2026-11-23 y repetida 2026-11-24 — NO es operación en vivo)
 - Config: `configs\demo_1_0_XAUUSD_M15.ini`
 - Periodo: 2026-10-01 → 2026-11-20, M15, **Model=4 (ticks reales)**
-- Datos: 13.872.206 ticks de XAUUSD, 3.312 barras; prueba pasada en 7,769 s
+- Datos: 13.872.206 ticks de XAUUSD, 3.312 barras
+- 2026-11-23: prueba pasada en 7,769 s
+- 2026-11-24: **repetida con el preset declarado en el `.ini`**, misma salida,
+  prueba pasada en 6,912 s; reporte `results\demo_1_0_report.htm`
 - Balance final: **10.096,96 CHF** (+96,96 CHF, **+0,97%**)
 - Trades: **1** (SELL 0,03, 2026-11-13 13:30 → 2026-11-16 20:30)
 - `R_simbolo=1,0137`, `R_net7=1,0115`, swap `+1,35`, comisión `0,00`
 - Filtro de coste en la entrada: **2,24% R** (ATR 6,130, spread 0,645) < 8,0% → PASS
-- Salida: `Common\Files\TradeX_S1_trades.csv` (copia en `results\demo_1_0_trades.csv`)
+- Salida: `Common\Files\TradeX_S1_trades.csv` (copias en
+  `results\demo_1_0_trades.csv`, log en `results\demo_1_0_tester.log`)
 - `OnTester result = 0` (no hay optimización; solo verificación de ejecución)
 
 ## Registro de trades (tester; la demo en vivo sigue pendiente)
