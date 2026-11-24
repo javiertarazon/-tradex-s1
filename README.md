@@ -107,6 +107,7 @@ $py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
 | `docs/EXTRACCION_FRAMEWORKS.md` | Resumen de los 5 repos auditados; qué se adoptó y qué se descartó. |
 | `docs/SINTESIS.md` | Síntesis ejecutiva: correcciones, ajustes, métricas, escalera de riesgo, OOS. |
 | `docs/DIAGNOSTICO_VENTAS.md` | Por qué el EA genera pocas ventas: embudo de filtros y contraste strict ON/OFF. |
+| `docs/ACTIVIDAD_S1.md` | Cómo aumentar la frecuencia de trades: sweep de palancas y variante `S1_gaB_active`. |
 | `results/metricas_s1.json` | JSON con todas las métricas por variante, año, costo, robustez, etc. |
 
 ---
