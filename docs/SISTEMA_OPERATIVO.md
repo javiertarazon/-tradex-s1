@@ -13,7 +13,7 @@ datos reales -> backtest MT5 (ticks) -> veredicto.py (G1-G7) -> paridad_ea.py (5
 
 ---
 
-## 1. `herramientas/veredicto.py` — las puertas G1–G7 en código
+## 1. `tools/veredicto.py` — las puertas G1–G7 en código
 
 Entra el CSV que escribe `OnTester` y sale PASS/FAIL por puerta. Juzga con
 `R_net7` (el más conservador: descuenta spread, swap y comisión por lote).

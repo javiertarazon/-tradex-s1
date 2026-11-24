@@ -334,18 +334,18 @@ El bootstrap asume que el edge observado es real; como el OOS dice que no lo sab
 
 ## Anexo — Artefactos
 
-- `resultados/tradex/robust.csv`: 60 combinaciones (ventana × tendencia × k × hold) con IS/OOS, PF, DD, t y coste/R.
-- `resultados/tradex/cost_lab.csv`: primer barrido coste-aware (base → k4).
-- `resultados/tradex/S1_ticks_2024_2026.htm`: informe MT5 Model=4 principal (99% ticks reales, 208M ticks).
-- `resultados/tradex/S1_ticks_trades.csv`: 69 trades del caso base con R neto de comisión.
-- `resultados/tradex/S1_ticks_trades_k35.csv`, `_k53.csv`, `_h120.csv`: robustez en ticks.
-- `resultados/tradex/S1_split_2024_OOS.htm` y `S1_split_2025_2026_IS.htm`: informes de la ruptura de muestra.
-- `resultados/tradex/OOS2024_*.csv`, `IS2025_2026_*.csv`, `REG2024_off.csv`: trades de cada tramo (incluye la corrida de regresión con `InpMaxATRPct=0`).
-- `resultados/tradex/metricas_s1.json`: métricas consolidadas (M15 + ticks + split + volatilidad + bróker).
-- `TradeX_S1_XAU/TradeX_S1_XAU.mq5`: fuente del EA validado (v1.10, añade `InpMaxATRPct`).
-- `C:\Users\javie\AppData\Local\Temp\opencode\utbot\xau_cost_lab.py`: réplica parametrizada y simulador con swap.
-- `C:\Users\javie\AppData\Local\Temp\opencode\utbot\xau_swap.py`: revaluación con swap real Dukascopy.
-- `C:\Users\javie\AppData\Local\Temp\opencode\utbot\xau_robust.py`: mesh de robustez IS/OOS.
+- `results/trades/robust.csv`: 60 combinaciones (ventana × tendencia × k × hold) con IS/OOS, PF, DD, t y coste/R.
+- `results/trades/cost_lab.csv`: primer barrido coste-aware (base → k4).
+- `results/reports/S1_ticks_2024_2026.htm`: informe MT5 Model=4 principal (99% ticks reales, 208M ticks).
+- `results/trades/S1_ticks_trades.csv`: 69 trades del caso base con R neto de comisión.
+- `results/trades/S1_ticks_trades_k35.csv`, `_k53.csv`, `_h120.csv`: robustez en ticks.
+- `results/reports/S1_split_2024_OOS.htm` y `results/reports/S1_split_2025_2026_IS.htm`: informes de la ruptura de muestra.
+- `results/trades/OOS2024_*.csv`, `IS2025_2026_*.csv`, `REG2024_off.csv`: trades de cada tramo (incluye la corrida de regresión con `InpMaxATRPct=0`).
+- `results/metricas_s1.json`: métricas consolidadas (M15 + ticks + split + volatilidad + bróker).
+- `..\TradeX_S1_XAU\TradeX_S1_XAU.mq5`: fuente del EA validado (v1.10, añade `InpMaxATRPct`).
+- `research/xau_cost_lab.py`: simulador parametrizado de costes (spread + comisión).
+- `research/s1_regime_ga.py`: revaluación con swap real Dukascopy (triple del miércoles).
+- `research/s1_paridad.py`: paridad y robustez temporal IS/OOS.
 
 ---
 
@@ -419,7 +419,7 @@ Implementadas (StoplossGuard, MaxDrawdown sobre equity, Cooldown), compiladas co
   bloqueó 48 h (126 velas). Con 12% no disparó nunca.
 - **No descartan ni una operación**: S1 opera una vez por semana, así que un
   bloqueo de 24-48 h casi nunca encuentra una señal dentro. Son un seguro de
-  cola, no un optimizador de DD. Detalle en `PROTECCIONES_S1.md`.
+  cola, no un optimizador de DD. Detalle en `PROTECCIONES.md`.
 
 ## 9.6 Pruebas transversales (recursive-analysis adaptado)
 
@@ -432,7 +432,7 @@ Implementadas (StoplossGuard, MaxDrawdown sobre equity, Cooldown), compiladas co
 
 ## 9.7 Veredicto final
 
-GA-B pasa **7/7 puertas** de `herramientas/veredicto.py`. Pero el techo realista
+GA-B pasa **7/7 puertas** de `tools/veredicto.py`. Pero el techo realista
 no es el 4,28 del holdout, sino el 1,6-2,3 que dan el año flojo y la muestra
 completa. Con DD de equity del 6,98% a 1,5% de riesgo y bootstrap P95 del 11,5%,
 la escalera admite **1,0-1,5% por operación**, no más.
@@ -442,13 +442,13 @@ fill reales), que es lo único que ninguna de estas pruebas puede medir.
 
 ## 9.8 Artefactos nuevos de esta ronda
 
-- `herramientas/veredicto.py` — puertas G1-G7 ejecutables, con detección de OOS
+- `tools/veredicto.py` — puertas G1-G7 ejecutables, con detección de OOS
   contaminado.
 - `tools/paridad_ea.py` — auditor estático de paridad research/live.
-- `resultados/SISTEMA_OPERATIVO.md` — el procedimiento completo, con los números.
-- `resultados/PROTECCIONES_S1.md` — medición de las protecciones.
-- `resultados/EXTRACCION_FRAMEWORKS.md` — qué se adoptó de los 5 repos.
-- `resultados/tradex/S1_ticks_*.csv` — 8 variantes de robustez.
-- `resultados/tradex/OOS2526_gaB.csv` — OOS real 2025-2026.
-- `resultados/tradex/veredicto_gaB.json` — veredicto completo en JSON.
+- `docs/SISTEMA_OPERATIVO.md` — el procedimiento completo, con los números.
+- `docs/PROTECCIONES.md` — medición de las protecciones.
+- `docs/EXTRACCION_FRAMEWORKS.md` — qué se adoptó de los 5 repos.
+- `results/trades/S1_ticks_*.csv` — 8 variantes de robustez.
+- `results/trades/OOS2526_gaB.csv` — OOS real 2025-2026.
+- `results/veredicto_gaB.json` — veredicto completo en JSON.
 

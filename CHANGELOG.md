@@ -14,7 +14,7 @@
 - `xau_cost_lab.py`: import `from indicators import atr, ema` en lugar de `from bot_mt5_gbpusd.indicators import atr, ema`.
 - `README.md` con estado 7/7, tablas de métricas, estructura, quickstart, limitaciones, veredicto.
 - `CHANGELOG.md` iniciado.
-- `doctores SISTEMA_OPERATIVO.md`, `PROTECCIONES_S1.md`, `EXTRACCION_FRAMEWORKS.md`, `SINTESIS_Y_SISTEMA_NUEVO.md` copiados a `docs/`.
+- `doctores SISTEMA_OPERATIVO.md`, `PROTECCIONES.md`, `EXTRACCION_FRAMEWORKS.md`, `SINTESIS.md` copiados a `docs/`.
 
 ### Corregido
 - **Etiqueta "OOS 2024" corregida**: en `SISTEMA_OPERATIVO.md` §6.1.1 y nueva §9, se aclara que el tramo "OOS 2024" es en realidad el tramo de entrenamiento de GA-B (2022-2024). El holdout real para GA-B es 2025-2026.
@@ -23,7 +23,7 @@
 - **Header `[TesterInputs]`** en todos los `.set` nuevos (confirmado: `S1_gaB.set`, `S1_gaA.set`, `S1_prot_*.set`, `S1_p_*.set`).
 
 ### Ajustado
-- Protecciones estilo Freqtrade: **OFF por defecto** (documentado en README, PROTECCIONES_S1.md y metricas_s1.json). No alteran el backtest validado; son seguro de cola.
+- Protecciones estilo Freqtrade: **OFF por defecto** (documentado en README, PROTECCIONES.md y metricas_s1.json). No alteran el backtest validado; son seguro de cola.
 - Escalera de riesgo documentada en `escalera_riesgo` de `metricas_s1.json` y README (0,5% → 2,5%, P95 DD 3,8% → 19,2%).
 - Umbral DD 15% tolerable si aporta rentabilidad; riesgo máximo 1,0-1,5% por operación (bootstrap P95 DD 11,5% a 1,5%).
 - GA: fitness `R/(DD+3)` con mínimo 12 trades; doble split temporal. Split A falla, split B converge al mismo atractor.

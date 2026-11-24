@@ -24,7 +24,7 @@ Repositorio autocontenido con la estrategia validada GA-B (v1.11), herramientas 
 
 ```
 tradex-s1/
-├─ docs/                # Documentos maestros (SISTEMA_OPERATIVO.md, PROTECCIONES_S1.md, etc.)
+├─ docs/                # Documentos maestros (SISTEMA_OPERATIVO.md, PROTECCIONES.md, etc.)
 ├─ src/                 # TradeX_S1_XAU.mq5 v1.11 (fuente EA)
 ├─ presets/             # Ficheros .set del tester MT5 (S1_gaB.set, variantes, protecciones)
 ├─ tools/               # veredicto.py, paridad_ea.py (auditoría automatizada)
@@ -103,9 +103,9 @@ $py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
 | Documento | Qué contiene |
 |---|---|
 | `docs/SISTEMA_OPERATIVO.md` | Procedimiento completo: datos → backtest → veredicto → pruebas transversales. |
-| `docs/PROTECCIONES_S1.md` | Medición de protecciones estilo Freqtrade (off por defecto; inertes: 1 trade/semana). |
+| `docs/PROTECCIONES.md` | Medición de protecciones estilo Freqtrade (off por defecto; inertes: 1 trade/semana). |
 | `docs/EXTRACCION_FRAMEWORKS.md` | Resumen de los 5 repos auditados; qué se adoptó y qué se descartó. |
-| `docs/SINTESIS_Y_SISTEMA_NUEVO.md` | Síntesis ejecutiva: correcciones, ajustes, métricas, escalera de riesgo, OOS. |
+| `docs/SINTESIS.md` | Síntesis ejecutiva: correcciones, ajustes, métricas, escalera de riesgo, OOS. |
 | `results/metricas_s1.json` | JSON con todas las métricas por variante, año, costo, robustez, etc. |
 
 ---

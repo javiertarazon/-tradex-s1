@@ -42,7 +42,7 @@ con `InpUseProtections=false` por defecto para no alterar el backtest validado.
 Medición en la secuencia real de trades: **las tres protecciones disparan, pero no
 descartan ni una operación** (S1 opera una vez por semana y los stops quedan a días
 de distancia). Es decir: aquí no reducen el DD, son un seguro contra un escenario de
-cola. Detalle y números en `PROTECCIONES_S1.md`.
+cola. Detalle y números en `PROTECCIONES.md`.
 
 ### 2.2 lookahead-analysis — el test que nos faltaba
 
@@ -115,7 +115,7 @@ Adoptar Hummingbot sería cambiar de negocio, no mejorar el nuestro.
 Se auditó en la ronda anterior. Aporta tres cosas que ya están en el protocolo:
 
 - **Registro por corrida**: cada resultado con su dataset, versión y logs. Nuestro equivalente son
-  los CSV de trades por corrida y los informes `.htm` archivados en `resultados/tradex/`.
+  los CSV de trades por corrida y los informes `.htm` archivados en `results/trades/`.
 - **Risk-xray**: descomposición del riesgo por operación, lado y régimen. Es lo que produjo el
   hallazgo del ATR% y el reparto largo/corto (53 largos PF 2.47 vs 16 cortos PF 1.40).
 - **OOS estricto**: no reportar in-sample como si fuera OOS. Es la razón por la que hoy sabemos
@@ -143,7 +143,7 @@ del repo de origen.
 
 | # | Pieza | Origen | Estado | Criterio de aceptación |
 |---|---|---|---|---|
-| 1 | Protecciones MQL5 (SLGuard, MaxDD equity, Cooldown) | Freqtrade | **Implementado y compilado (v1.11, 0 errores). Verificado en ticks: ver `PROTECCIONES_S1.md`** | Con `InpUseProtections=false` el resultado debe ser idéntico al validado (regresión) |
+| 1 | Protecciones MQL5 (SLGuard, MaxDD equity, Cooldown) | Freqtrade | **Implementado y compilado (v1.11, 0 errores). Verificado en ticks: ver `PROTECCIONES.md`** | Con `InpUseProtections=false` el resultado debe ser idéntico al validado (regresión) |
 | 2 | Test de desplazamiento de señal | Freqtrade recursive-analysis | **Hecho** | PF con 3 velas de retraso = 83% del base (criterio ≥70%): pasa |
 | 3 | Objetivo Calmar + mínimo de trades en el GA | Freqtrade hyperopt | **Ya aplicado** | Ninguna configuración con < 12 trades puntúa |
 | 4 | Checklist de paridad | NautilusTrader | **Automatizado en `tools/paridad_ea.py`**: S1 5/5, control negativo 0/5 | 5/5 reglas verificadas en el código |
