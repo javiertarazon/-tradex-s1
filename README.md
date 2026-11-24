@@ -112,6 +112,7 @@ $py='D:\proyectos_javier\proyectos\TradingAgents\.venv\Scripts\python.exe'
 | `docs/DD20_ALTA_FRECUENCIA.md` | Alta frecuencia con DD<20%: preset `S1_dd20_freq`, 192 trades y guarda de equity. |
 | `docs/MULTIPOSICION_S1.md` | EA `TradeX_S1_XAU_Multi`: hasta 6 posiciones, 465 trades y DD<20%. |
 | `docs/MULTI8_MAX_PNL.md` | **Recomendado**: preset `S1_multi8_h72_r125`, 477 trades, +343,8%, DD<20%. Incluye estudio de lotaje dinámico (descartado). |
+| `docs/REVISION_EL_ELEGIDO_Y_V113.md` | Revisión de optimizaciones recientes: deriva del `.ex5` a v1.13 y evaluación de `el elegido` (3 trades en 2 años, no auditable). |
 | `results/metricas_s1.json` | JSON con todas las métricas por variante, año, costo, robustez, etc. |
 
 ---
